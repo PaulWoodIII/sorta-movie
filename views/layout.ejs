@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
 
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <title>
+    <%=typeof title == 'undefined' ? 'Sorta Movie' : title%>
+  </title>
+
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <!--
+  <!--
         Stylesheets and Preprocessors
         ==============================
 
@@ -28,14 +31,60 @@
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
 
-    <!--STYLES-->
-    <link rel="stylesheet" href="/styles/importer.css">
-    <!--STYLES END-->
-  </head>
+  <!--STYLES-->
+  <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/importer.css">
+  <!--STYLES END-->
+</head>
 
-  <body>
-    <%- body %>
+<body>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="../" class="navbar-brand">Sorta Movie</a>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
 
+      </div>
+    </div>
+  </div>
+
+  <%- body %>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="col-lg-4">
+          <ul>
+            <li>
+              <p>Based on <a href="http://flickchart.com" rel="nofollow">FlickChart</a>.</p>
+            </li>
+            <li>
+              <p>Made by <a href="http://paulwoodiii.com" rel="nofollow">Paul Wood</a>.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <ul>
+            <li>
+              <p>Code released under the <a href="https://github.com/paulwoodiii/sorta-movie/blob/master/LICENSE">MIT License</a>.</p>
+            </li>
+            <li>
+              <p>Movie meta data provided by <a href="https://www.themoviedb.org/">The Movie DB</a>.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <ul>
+            <li>
+              <p>Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>.</p>
+            </li>
+            <li>
+              <p>Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
 
     <!--
@@ -60,7 +109,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+
     <!--TEMPLATES END-->
 
 
@@ -89,6 +138,10 @@
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/jquery.min.js"></script>
+    <script src="/js/dependencies/bootstrap.min.js"></script>
+    <script src="/js/dependencies/angular.min.js"></script>
     <!--SCRIPTS END-->
-  </body>
+</body>
+
 </html>
